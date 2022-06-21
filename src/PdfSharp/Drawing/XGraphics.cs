@@ -4887,18 +4887,18 @@ namespace PdfSharp.Drawing  // #??? Clean up
         /// Updates the clip region of this XGraphics to the intersection of the 
         /// current clip region and the specified rectangle.
         /// </summary>
-        public void IntersectClip(XRect rect)
+        public void IntersectClip(XRect rect, XCombineMode combineMode = XCombineMode.Intersect)
         {
             XGraphicsPath path = new XGraphicsPath();
             path.AddRectangle(rect);
-            IntersectClip(path);
+            IntersectClip(path, combineMode );
         }
 
         /// <summary>
         /// Updates the clip region of this XGraphics to the intersection of the 
         /// current clip region and the specified graphical path.
         /// </summary>
-        public void IntersectClip(XGraphicsPath path)
+        public void IntersectClip(XGraphicsPath path, XCombineMode combineMode = XCombineMode.Intersect)
         {
             if (path == null)
                 throw new ArgumentNullException("path");
@@ -4938,7 +4938,7 @@ namespace PdfSharp.Drawing  // #??? Clean up
             }
 
             if (_renderer != null)
-                _renderer.SetClip(path, XCombineMode.Intersect);
+                _renderer.SetClip(path, combineMode);
         }
 
         //public void SetClip(Graphics g);
