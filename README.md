@@ -3,6 +3,10 @@ A .NET library for processing PDF
 
 # Resources
 
+This version's nuget:
+https://www.nuget.org/packages/PDFSharp.clipping
+
+
 The official project web site:  
 http://pdfsharp.net/
 
