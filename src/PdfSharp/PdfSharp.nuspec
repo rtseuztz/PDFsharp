@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>PDFSharp.clipping</id>
+    <version>1.0</version>
+    <title>PDFSharp-clip</title>
+    <authors>$author$</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/rtseuztz/PDFsharp</projectUrl>
+    <description>Updated PDFSharp to include the option to exclude clip areas</description>
+    <releaseNotes>Exclude clip now is an option.</releaseNotes>
+    <copyright></copyright>
+    <tags>PDFSharp clip</tags>
+  </metadata>
+</package>

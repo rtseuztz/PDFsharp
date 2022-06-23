@@ -905,15 +905,9 @@ namespace PdfSharp.Drawing.Pdf
                 }
                 _clipLevel = _gfxState.Level;
             }
-            else if (combineMode == XCombineMode.Intersect)
-            {
-                if (_clipLevel == 0)
-                    _clipLevel = _gfxState.Level;
-            }
-            else
-            {
-                Debug.Assert(false, "Invalid XCombineMode in internal function.");
-            }
+            if (_clipLevel == 0)
+                _clipLevel = _gfxState.Level;
+
             _gfxState.SetAndRealizeClipPath(path);
         }
 
